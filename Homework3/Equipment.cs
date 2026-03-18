@@ -2,17 +2,21 @@ namespace Homework3;
 
 public abstract class Equipment
 {
+    public int id { get; set; }
     public string name { get; set; }
-    public string status { get; set; }
-    public string size { get; set; }
-    public int levelOfBattery { get; set; }
+    public bool available { get; set; }
+    
+    public string color { get; set; }
+    public string brand { get; set; }
+    
 
-    public Equipment(string name, string status, string size, int levelOfBattery)
+    public Equipment(string name, bool available, string color, int id, string brand)
     {
         this.name = name;
-        this.status = status;
-        this.size = size;
-        this.levelOfBattery = levelOfBattery;
+        this.available = available;
+        this.color = color;
+        this.id = id;
+        this.brand = brand;
     }
     
 }
