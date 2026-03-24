@@ -2,15 +2,16 @@ namespace Homework3;
 
 public class Laptop : Equipment
 {
-    public double screenDiagonal { get; set; }
+    public double ScreenDiagonal { get; set; }
     public string OperatingSystem { get; set; }
 
-    public Laptop(double screenDiagonal, string operatingSystem, string name, bool available, string color, int id,
+    public Laptop(double screenDiagonal, string operatingSystem, string name, bool available, string color,
         string brand)
-        : base(name, available, color, id, brand)
+        : base(name, available, color, brand)
     {
-        this.screenDiagonal = screenDiagonal;
-        this.OperatingSystem = operatingSystem;
+        ScreenDiagonal = screenDiagonal;
+        OperatingSystem = operatingSystem;
     }
-
+    public override string ToString() => base.ToString() + $" | Screen Diagonal: {ScreenDiagonal}\", " +
+                                         $"Operating System: {OperatingSystem}";    
 }

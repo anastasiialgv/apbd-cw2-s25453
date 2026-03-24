@@ -2,13 +2,15 @@ namespace Homework3;
 
 public class Camera : Equipment
 {
-    public string imageFormat { get; set; }
-    public string imageResolution  { get; set; }
+    public string ImageFormat { get; set; }
+    public string ImageResolution  { get; set; }
 
-    public Camera(string imageFormat, string imageResolution, string name, bool available, string color, int id,
-        string brand) : base(name, available, color, id, brand)
+    public Camera(string imageFormat, string imageResolution, string name, bool available, string color,
+        string brand) : base(name, available, color, brand)
     {
-        this.imageFormat = imageFormat;
-        this.imageResolution = imageResolution;
+        ImageFormat = imageFormat;
+        ImageResolution = imageResolution;
     }
+    
+    public override string ToString() => base.ToString() + $" | Image Format: {ImageFormat}, Image Resolution: {ImageResolution}";
 }

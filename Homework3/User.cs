@@ -18,4 +18,8 @@ public abstract class User
         Name = name;
         Surname = surname; 
     }
+    public override string ToString()
+    {
+        return $"[{Id}] {Name} {Surname}\n";
+    }
 }
